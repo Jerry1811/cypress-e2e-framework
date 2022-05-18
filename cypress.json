@@ -2,7 +2,7 @@
 	"viewportWidth": 1920,
 	"viewportHeight": 1080,
 	"browser": "chrome",
-	"pageLoadTimeout": 40000,
+	"pageLoadTimeout": 100000,
 	"defaultCommandTimeout": 10000,
 	"testFiles": ["tests/**/*.spec.js", "tests/**/*.spec.ts"],
 	"video": false,
@@ -11,5 +11,11 @@
 	"scrollBehavior": "center",
 	"chromeWebSecurity": false,
 	"watchForFileChanges": false,
-	"baseUrl": "https://www.cypress.io/"
+	"baseUrl": "https://www.cypress.io/",
+	"reporter": "cypress-mochawesome-reporter",
+	"reporterOptions": {
+		"reportDir": "cypress/reports/",
+		"charts": true,
+		"reportPageTitle": "custom-title"
+	}
 }
